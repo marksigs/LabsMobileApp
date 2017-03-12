@@ -1,4 +1,7 @@
 ﻿using Foundation;
+using Microsoft.Azure.Mobile;
+using Microsoft.Azure.Mobile.Analytics;
+using Microsoft.Azure.Mobile.Crashes;
 using UIKit;
 
 namespace LabsMobileApp
@@ -22,6 +25,8 @@ namespace LabsMobileApp
             // Override point for customization after application launch.
             // If not required for your application you can safely delete this method
 
+            MobileCenter.Start("a59e28f8-1337-4248-ace8-085d49e294c3",
+                   typeof(Analytics), typeof(Crashes));
             return true;
         }
 
